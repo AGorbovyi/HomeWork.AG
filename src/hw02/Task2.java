@@ -1,4 +1,4 @@
-package hw01;
+package hw02;
 
 public class Task2 {
     public static void main(String[] args){
