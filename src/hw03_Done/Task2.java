@@ -1,4 +1,4 @@
-package hw03;
+package hw03_Done;
 
 public class Task2 {
 
@@ -14,15 +14,15 @@ public class Task2 {
         int number9 = 8;
         int number10 = 9;
 
-        int sum;
-        int averageNumber;
-        float remainder;
-        float tempNumber;
+        Task2Method method = new Task2Method();
 
-        sum = (number1 + number2 + number3 + number4 + number5 + number6 + number7 + number8 + number9 + number10);
-        averageNumber = sum / 10;
-        tempNumber = sum;
-        remainder = tempNumber / 10 - averageNumber;
+        int sum = method.sum(number1, number2, number3, number4, number5, number6, number7, number8, number9, number10);
+
+        int averageNumber = method.averageNumber(sum, 10);
+
+        float remainder;
+
+        remainder = (float) sum / 10 - averageNumber;
 
         System.out.println("Данные переменные: " + number1 + ", " + number2 + ", " + number3 + ", " + number4 + ", " + number5 + ", " + number6 + ", " + number7 + ", " + number8 + ", " + number9 + ", " + number10);
         System.out.println("Cумма: " + sum);

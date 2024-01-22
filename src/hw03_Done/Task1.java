@@ -1,4 +1,4 @@
-package hw03;
+package hw03_Done;
 
 public class Task1 {
     public static void main(String[] args) {

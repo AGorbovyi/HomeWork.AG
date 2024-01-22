@@ -1,4 +1,4 @@
-package hw03;
+package hw03_Done;
 
 // int x = 3
 //Чему будет равно значение х после выполнения операции x += x++ ?
@@ -7,6 +7,12 @@ public class Task6 {
     public static void main(String[] args) {
         int x = 3;
         int y = 3;
+
+        x += x++;
+        System.out.println(x);
+
+        x += x++;
+        System.out.println(x);
 
         x += x++;
         System.out.println(x);

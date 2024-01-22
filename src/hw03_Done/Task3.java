@@ -1,4 +1,4 @@
-package hw03;
+package hw03_Done;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -9,9 +9,9 @@ public class Task3 {
         float orderPrice;
         float totalOrderPrice;
 
-        productPriceA = 1000;
-        productPriceB = 500;
-        discount = 100;
+        productPriceA = 1000f;
+        productPriceB = 500f;
+        discount = 100f;
 
         orderPrice = Float.sum(productPriceA, productPriceB);
         totalOrderPrice = orderPrice - discount;
