@@ -12,7 +12,7 @@ public class BookDemo {
         System.out.println(book2.bookTitle);
         System.out.println(book2.pagesNumber);
         System.out.println(book2.catalogNumber);
-        System.out.println(book2.inStorage);
+        System.out.println(book2.isInStorage);
         System.out.println(book2);
 
         BookUtil util = new BookUtil();
@@ -49,7 +49,7 @@ public class BookDemo {
 
         // другой альтернативный способ копирования
 
-        Book book5 = new Book(book3.author + " (copy)", book3.bookTitle,book3.pagesNumber, book3.catalogNumber, book3.inStorage);
+        Book book5 = new Book(book3.author + " (copy)", book3.bookTitle,book3.pagesNumber, book3.catalogNumber, book3.isInStorage);
 
         util.editBookCatalogNumber(1768746.1356, book5);
 

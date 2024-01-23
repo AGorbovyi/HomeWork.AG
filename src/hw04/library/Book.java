@@ -5,7 +5,7 @@ public class Book {
     String bookTitle;
     int pagesNumber;
     double catalogNumber;
-    boolean inStorage;
+    boolean isInStorage;
 
     public Book(String author, String bookTitle){
         this.author = author;
@@ -16,7 +16,7 @@ public class Book {
         this.bookTitle = bookTitle;
         this.pagesNumber = pagesNumber;
         this.catalogNumber = catalogNumber;
-        this.inStorage = inStorage;
+        this.isInStorage = inStorage;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Book {
                 ", bookTitle='" + bookTitle + '\'' +
                 ", pagesNumber=" + pagesNumber +
                 ", catalogNumber=" + catalogNumber +
-                ", inStorage=" + inStorage +
+                ", inStorage=" + isInStorage +
                 '}';
     }
 }

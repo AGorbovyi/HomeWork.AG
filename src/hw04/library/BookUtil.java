@@ -10,11 +10,11 @@ public class BookUtil {
     }
 
     public void editBookInStorage(boolean inStorage, Book book){
-        book.inStorage = inStorage;
+        book.isInStorage = inStorage;
     }
 
     public Book copyBook(Book book){
-        Book copyBook = new Book(book.author, book.bookTitle + " (copy)", book.pagesNumber, book.catalogNumber, book.inStorage);
+        Book copyBook = new Book(book.author, book.bookTitle + " (copy)", book.pagesNumber, book.catalogNumber, book.isInStorage);
         return copyBook;
     }
 }
