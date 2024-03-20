@@ -1,4 +1,4 @@
-package hw05;
+package hw05_Done_;
 
 /* public class PizzaCalorie {
     public double caloriesInPizza(double diameter){

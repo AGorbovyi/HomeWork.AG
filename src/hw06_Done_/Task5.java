@@ -1,4 +1,4 @@
-package hw06;
+package hw06_Done_;
 
 public class Task5 {
 }

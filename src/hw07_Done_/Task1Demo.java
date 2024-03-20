@@ -1,4 +1,4 @@
-package hw07;
+package hw07_Done_;
 
 public class Task1Demo {
     public static void main(String[] args) {

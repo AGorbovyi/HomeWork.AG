@@ -1,4 +1,4 @@
-package hw07;
+package hw07_Done_;
 
 public class Task1 {
     public int pow(int number, int pow){
