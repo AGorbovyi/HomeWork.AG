@@ -1,5 +1,4 @@
 package hw04_Done_.library;
-
 public class BookDemo {
     public static void main(String[] args){
         Book book1 = new Book("Lev Tolstoy", "War and Peace");

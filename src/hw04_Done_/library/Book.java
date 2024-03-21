@@ -1,5 +1,4 @@
 package hw04_Done_.library;
-
 public class Book {
     String author;
     String bookTitle;
