@@ -10,23 +10,16 @@ public class RubberList {
 
     private Node last;
 
+    private int findIndex;
+
     public int size() {
         return size;
     }
 
     public Integer get(int idx){
-        if (idx == 0) {
-            return first.item;
-        } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index){
-                    return cursor.item;
-                }
-            }
+        Node findNode = findByIndex(idx);
+        if (findNode != null){
+            return findNode.item;
         }
         return null;
     }
@@ -49,19 +42,24 @@ public class RubberList {
 
     }
 
-    public void contains(){
-
+    public boolean contains(int value){
+        return indexOf(value) != -1;
     }
 
-    public void indexOf(){
-
+    public Integer indexOf(int value){
+        Node node = findByValue(value);
+        if (node != null) {
+            return findIndex;
+        }
+        return  -1;
     }
 
 
 
     public void remove(int idx) {
+        // if we want to remove 1st element
         if (idx == 0) {
-            if (size == 1){
+            if (size == 1) {
                 first = null;
             } else {
                 Node newFirst = first.next;
@@ -69,24 +67,26 @@ public class RubberList {
                 first = newFirst;
             }
             size--;
+            // if we want to remove last element
+        } else if (idx == size - 1) {
+            Node newLast = last.prev;
+            newLast.next = null;
+            last.prev = null;
+            last = newLast;
+            size--;
         } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index){
-                    Node left = cursor.prev;
-                    Node right = cursor.next;
-                    left.next = right;
-                    if (right != null) {
-                        right.prev = left;
-                    }
-                    cursor.prev = null;
-                    cursor.next = null;
-                    size--;
-                }
+            //if we want to delete some middle element
+            Node findNode = findByIndex(idx);
+            if (findNode == null) {
+                return;
             }
+            Node nodeA = findNode.prev;
+            Node nodeC = findNode.next;
+            nodeA.next = nodeC;
+            nodeC.prev = nodeA;
+            findNode.prev = null;
+            findNode.next = null;
+            size--;
         }
     }
 
@@ -104,6 +104,44 @@ public class RubberList {
             }
         }
         return sb.append("]").toString();
+    }
+
+    private Node findByIndex(int idx) {
+        if (idx == 0) {
+            return first;
+        }
+        if (idx == size - 1) {
+            return last;
+        }
+        findIndex = 0;
+        Node cursor = first;
+        while (cursor.next != null) {
+            cursor = cursor.next;
+            findIndex++;
+            if (idx == findIndex){
+                return cursor;
+            }
+        }
+        return null;
+    }
+
+    private Node findByValue(int value) {
+        if (size == 0){
+            return first;
+        }
+        findIndex = 0;
+        if(first.item == value){
+            return first;
+        }
+        Node cursor = first;
+        while (cursor.next != null) {
+            cursor = cursor.next;
+            findIndex++;
+            if (cursor.item == value){
+                return cursor;
+            }
+        }
+        return null;
     }
 
 }
