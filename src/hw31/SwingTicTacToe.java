@@ -12,6 +12,8 @@ public class SwingTicTacToe extends JFrame {
         setSize(500, 500);
         setLocationRelativeTo(null);
 
+        TicTacToe.initTable();
+
         Canvas canvas = new Canvas();
         canvas.setBackground(Color.white);
 
