@@ -1,6 +1,4 @@
-package task1;
-
-import java.util.ArrayList;
+package task1and2;
 
 public class Task1 {
     public static void main(String[] args) {
