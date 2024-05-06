@@ -6,6 +6,10 @@ import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -49,15 +53,25 @@ public class Task2 {
         System.out.println("===============");
 
         // List of dates
-        LocalDate Anton = LocalDate.of(1985, Month.AUGUST, 11);
-        LocalDate chrisHemsworth = LocalDate.of(1983, Month.AUGUST, 11);
-        LocalDate mikhailBulgakov = LocalDate.of(1891, Month.MAY, 15);
-        LocalDate williamShakespeare = LocalDate.of(1564, Month.APRIL, 23);
-        LocalDate sigmundFreud = LocalDate.of(1856, Month.MAY, 6);
+        List<LocalDate> dates = new ArrayList<>(List.of(
+                LocalDate.of(1985, Month.AUGUST, 11),
+                LocalDate.of(1983, Month.AUGUST, 11),
+                LocalDate.of(1891, Month.MAY, 15),
+                LocalDate.of(1564, Month.APRIL, 23),
+                LocalDate.of(1856, Month.MAY, 6)
+        ));
+        System.out.println(dates);
+        System.out.println(dateBetween(dates));
 
-        // method
-//        public static int dateBetween (LocalDate) {
-//            Period period = Period.between(Anton, chrisHemsworth);
-//        }
+//        LocalDate anton = LocalDate.of(1985, Month.AUGUST, 11);
+//        LocalDate chrisHemsworth = LocalDate.of(1983, Month.AUGUST, 11);
+//        LocalDate mikhailBulgakov = LocalDate.of(1891, Month.MAY, 15);
+//        LocalDate williamShakespeare = LocalDate.of(1564, Month.APRIL, 23);
+//        LocalDate sigmundFreud = LocalDate.of(1856, Month.MAY, 6);
+    }
+    // method
+    public static long dateBetween (List<LocalDate> dates) {
+        Collections.sort(dates);
+        return dates.get(0).until(dates.get(dates.size() - 1), ChronoUnit.DAYS);
     }
 }
