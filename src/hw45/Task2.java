@@ -56,7 +56,7 @@ public class Task2 {
         LocalDate sigmundFreud = LocalDate.of(1856, Month.MAY, 6);
 
         // method
-//        public LocalDate dateBetween () {
+//        public static int dateBetween () {
 //            Period period = Period.between(Anton, chrisHemsworth);
 //            System.out.println(period.getYears() + " years " + period.getMonths() + " months " + period.getDays() + " days");
 //        }
