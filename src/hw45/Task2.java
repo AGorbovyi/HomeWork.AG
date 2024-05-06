@@ -58,7 +58,6 @@ public class Task2 {
         // method
 //        public static int dateBetween (LocalDate) {
 //            Period period = Period.between(Anton, chrisHemsworth);
-//            System.out.println(period.getYears() + " years " + period.getMonths() + " months " + period.getDays() + " days");
 //        }
     }
 }
